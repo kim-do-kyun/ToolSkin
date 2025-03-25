@@ -1,0 +1,5 @@
+name: ToolSkin
+version: '1.0-SNAPSHOT'
+main: org.desp.toolSkin.ToolSkin
+api-version: '1.20'
+depend: [MongoLibraryPlugin]
