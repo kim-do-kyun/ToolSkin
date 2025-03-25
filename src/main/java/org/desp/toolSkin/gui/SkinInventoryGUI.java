@@ -28,7 +28,6 @@ public class SkinInventoryGUI implements InventoryHolder {
 
     public void setUpInventory(Inventory inventory, Player player) {
         UserDataDto playerData = UserDataRepository.getInstance().getPlayerData(player);
-        List<String> effectList = playerData.getPickaxeSkinInventory();
 
         List<String> pickaxeSkinInventory = playerData.getPickaxeSkinInventory();
         List<String> fishingRodSkinInventory = playerData.getFishingRodSkinInventory();
@@ -68,11 +67,11 @@ public class SkinInventoryGUI implements InventoryHolder {
             }
             inventory.setItem(i, uiBlank);
         }
-        for (String effect : effectList) {
+        for (String skin : pickaxeSkinInventory) {
             if(slot > 45){
                 break;
             }
-            itemMeta.setDisplayName("§f"+effect);
+            itemMeta.setDisplayName("§f"+skin);
             itemStack.setItemMeta(itemMeta);
             this.inventory.setItem(slot, itemStack);
             slot++;

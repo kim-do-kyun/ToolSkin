@@ -3,3 +3,6 @@ version: '1.0-SNAPSHOT'
 main: org.desp.toolSkin.ToolSkin
 api-version: '1.20'
 depend: [MongoLibraryPlugin]
+commands:
+  아이템스킨:
+    aliases : ["dkdlxpatmzls"]
